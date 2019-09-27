@@ -15,33 +15,33 @@ before:
     - 00_01-welcome.md
 
 steps:
-# - title: Comencemos! 
-#   description: Tiremos un poco magia con Git 
-#   event: issues.closed 
-#   link: '{{ repoUrl }}/issues/1' 
-#   actions:
-#   - type: createIssue
-#     title: Como usar HEAD
-#     body: 02_using_head.md
-#     action_id: head_issue
-#   - type: respond
-#     with: closed-issue.md
-#     data:
-#       nextIssueUrl: '%actions.head_issue.data.html_url%'
+- title: Comencemos! 
+  description: Tiremos un poco magia con Git 
+  event: issues.closed 
+  link: '{{ repoUrl }}/issues/1' 
+  actions:
+  - type: createIssue
+    title: Como usar HEAD
+    body: 02_using_head.md
+    action_id: head_issue
+  - type: respond
+    with: closed-issue.md
+    data:
+      nextIssueUrl: '%actions.head_issue.data.html_url%'
 
-# - title: Como usar HEAD
-#   description: Que es el puntero `HEAD`?
-#   event: issues.closed
-#   link: '{{ repoUrl }}/issues/2'
-#   actions:
-#   - type: createIssue
-#     title: Git log
-#     body: 03-git-log-issue.md
-#     action_id: git_log_issue
-#   - type: respond
-#     with: closed-issue.md
-#     data:
-#       nextIssueUrl: '%actions.git_log_issue.data.html_url%'
+- title: Como usar HEAD
+  description: Que es el puntero `HEAD`?
+  event: issues.closed
+  link: '{{ repoUrl }}/issues/2'
+  actions:
+  - type: createIssue
+    title: Git log
+    body: 03-git-log-issue.md
+    action_id: git_log_issue
+  - type: respond
+    with: closed-issue.md
+    data:
+      nextIssueUrl: '%actions.git_log_issue.data.html_url%'
 
 - title: Git log
   description: Como ver los logs de una manera mas práctica
@@ -74,123 +74,123 @@ steps:
     data:
       nextPrUrl: '%actions.git_stash_pr.data.html_url%'
 
-# - title: Stashear cambios
-#   description: Necesito actualizar mi branch sin tener conflictos con los cambios que vengo trabajando.
-#   event: pull_request.synchronize
-#   link: '{{ repoUrl }}/pull/4'
-#   actions:
-#   - type: respond
-#     with: 04_01-git-stash-pull-changes.md
-#   - type: octokit
-#     method: pullRequests.createComment
-#     owner: '%payload.repository.owner.login%'
-#     repo: '%payload.repository.name%'
-#     number: '%payload.number%'
-#     commit_id: '%payload.pull_request.head.sha%'
-#     path: README.md
-#     body: |
-#       ```suggestion
-#       :stuck_out_tongue_closed_eyes:
-#       ```
-#     position: 3
+- title: Stashear cambios
+  description: Necesito actualizar mi branch sin tener conflictos con los cambios que vengo trabajando.
+  event: pull_request.synchronize
+  link: '{{ repoUrl }}/pull/4'
+  actions:
+  - type: respond
+    with: 04_01-git-stash-pull-changes.md
+  - type: octokit
+    method: pullRequests.createComment
+    owner: '%payload.repository.owner.login%'
+    repo: '%payload.repository.name%'
+    number: '%payload.number%'
+    commit_id: '%payload.pull_request.head.sha%'
+    path: README.md
+    body: |
+      ```suggestion
+      :stuck_out_tongue_closed_eyes:
+      ```
+    position: 3
 
-# - title: Stashear cambios (parte 2)
-#   description: '-'
-#   event: pull_request.synchronize
-#   link: '{{ repoUrl }}/pull/4'
-#   actions:
-#   - type: respond
-#     with: 04_02-git-stash-pull-changes.md
+- title: Stashear cambios (parte 2)
+  description: '-'
+  event: pull_request.synchronize
+  link: '{{ repoUrl }}/pull/4'
+  actions:
+  - type: respond
+    with: 04_02-git-stash-pull-changes.md
 
-# - title: Rebaseame mucho
-#   description: Local Cleanup
-#   event: pull_request_review.submitted
-#   link: '{{ repoUrl }}/pull/4'
-#   actions:
-#   - type: respond
-#     with: 05-git-rebase-pr.md
-#   - type: respond
-#     with: 05_00-git-rebase-activity.md
+- title: Rebaseame mucho
+  description: Local Cleanup
+  event: pull_request_review.submitted
+  link: '{{ repoUrl }}/pull/4'
+  actions:
+  - type: respond
+    with: 05-git-rebase-pr.md
+  - type: respond
+    with: 05_00-git-rebase-activity.md
 
-# - title: Rebaseame mucho (parte 2)
-#   description: 'Diferencia entre git merge/git pull y git pull --rebase'
-#   event: pull_request.synchronize
-#   link: '{{ repoUrl }}/pull/4'
-#   actions:
-#   - type: respond
-#     with: 05_01-approve-git-rebase-pr.md
+- title: Rebaseame mucho (parte 2)
+  description: 'Diferencia entre git merge/git pull y git pull --rebase'
+  event: pull_request.synchronize
+  link: '{{ repoUrl }}/pull/4'
+  actions:
+  - type: respond
+    with: 05_01-approve-git-rebase-pr.md
 
-# - title: '--Ctrl+z Ctrl+z Ctrl+z--'
-#   description: Deshaciendo el lio
-#   event: pull_request.closed
-#   actions:
-#   - type: createIssue
-#     title: '--Ctrl+z Ctrl+z Ctrl+z--'
-#     body: 06-git-undo-issue.md
-#     action_id: git_undo_issue
-#     comments:
-#       - 06_01-git-undo-activity.md
-#   - type: respond
-#     with: closed-issue.md
-#     data:
-#       nextIssueUrl: '%actions.git_undo_issue.data.html_url%'
+- title: '--Ctrl+z Ctrl+z Ctrl+z--'
+  description: Deshaciendo el lio
+  event: pull_request.closed
+  actions:
+  - type: createIssue
+    title: '--Ctrl+z Ctrl+z Ctrl+z--'
+    body: 06-git-undo-issue.md
+    action_id: git_undo_issue
+    comments:
+      - 06_01-git-undo-activity.md
+  - type: respond
+    with: closed-issue.md
+    data:
+      nextIssueUrl: '%actions.git_undo_issue.data.html_url%'
 
-# - title: Cherrypicking
-#   description: Moviendo cosas de lugar
-#   event: issues.closed
-#   actions:
-#   - type: createIssue
-#     title: Cherrypicking
-#     body: 07-git-cherrypick-issue.md
-#     action_id: git_cherrypick_issue
-#   - type: respond
-#     with: closed-issue.md
-#     data:
-#       nextIssueUrl: '%actions.git_cherrypick_issue.data.html_url%'
+- title: Cherrypicking
+  description: Moviendo cosas de lugar
+  event: issues.closed
+  actions:
+  - type: createIssue
+    title: Cherrypicking
+    body: 07-git-cherrypick-issue.md
+    action_id: git_cherrypick_issue
+  - type: respond
+    with: closed-issue.md
+    data:
+      nextIssueUrl: '%actions.git_cherrypick_issue.data.html_url%'
 
-# - title: 'B-rancheando'
-#   description: Algunos parametros utiles de branching
-#   event: issues.closed
-#   actions:
-#   - type: createIssue
-#     title: 'B-rancheando'
-#     body: 08-git-branch-issue.md
-#     action_id: git_branch_issue
-#   - type: respond
-#     with: closed-issue.md
-#     data:
-#       nextIssueUrl: '%actions.git_branch_issue.data.html_url%'
+- title: 'B-rancheando'
+  description: Algunos parametros utiles de branching
+  event: issues.closed
+  actions:
+  - type: createIssue
+    title: 'B-rancheando'
+    body: 08-git-branch-issue.md
+    action_id: git_branch_issue
+  - type: respond
+    with: closed-issue.md
+    data:
+      nextIssueUrl: '%actions.git_branch_issue.data.html_url%'
 
-# - title: Frutilla del postre
-#   description: Sorpresa!
-#   event: issues.closed
-#   actions:
-#   - type: createIssue
-#     title: Frutillita del postre
-#     body: 09-git-hub-issue.md
-#     action_id: git_hub_issue
-#   - type: respond
-#     with: closed-issue.md
-#     data:
-#       nextIssueUrl: '%actions.git_hub_issue.data.html_url%'
+- title: Frutilla del postre
+  description: Sorpresa!
+  event: issues.closed
+  actions:
+  - type: createIssue
+    title: Frutillita del postre
+    body: 09-git-hub-issue.md
+    action_id: git_hub_issue
+  - type: respond
+    with: closed-issue.md
+    data:
+      nextIssueUrl: '%actions.git_hub_issue.data.html_url%'
 
-# - title: Felicitaciones!
-#   description: Terminaste el curso sobre Git/Github
-#   event: issues.closed
-#   actions:
-#   - type: createIssue
-#     title: Felicitaciones!
-#     body: 10-finish.md
-#     action_id: git_finish
-#   - type: respond
-#     with: closed-issue.md
-#     data:
-#       nextIssueUrl: '%actions.git_finish.data.html_url%'
+- title: Felicitaciones!
+  description: Terminaste el curso sobre Git/Github
+  event: issues.closed
+  actions:
+  - type: createIssue
+    title: Felicitaciones!
+    body: 10-finish.md
+    action_id: git_finish
+  - type: respond
+    with: closed-issue.md
+    data:
+      nextIssueUrl: '%actions.git_finish.data.html_url%'
 
-# - title: The End
-#   description: Thats all folks
-#   event: issues.closed
-#   actions:
-#   - type: removeBranchProtection
-#   - type: respond
-#     with: happy-final.md
+- title: The End
+  description: Thats all folks
+  event: issues.closed
+  actions:
+  - type: removeBranchProtection
+  - type: respond
+    with: happy-final.md
