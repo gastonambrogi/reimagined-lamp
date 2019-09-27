@@ -28,7 +28,6 @@ steps:
 #     with: closed-issue.md
 #     data:
 #       nextIssueUrl: '%actions.head_issue.data.html_url%'
-
 - title: Como usar HEAD
   description: Que es el puntero `HEAD`?
   event: issues.closed
