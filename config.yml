@@ -90,7 +90,7 @@ steps:
     path: README.md
     body: |
       ```suggestion
-      :stuck_out_tongue_closed_eyes:
+      :stuck_out_tongue_closed_eyes: 
       ```
     position: 3
 
