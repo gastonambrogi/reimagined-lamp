@@ -29,19 +29,19 @@ steps:
     data:
       nextIssueUrl: '%actions.head_issue.data.html_url%'
 
-# - title: Como usar HEAD
-#   description: Que es el puntero `HEAD`?
-#   event: issues.closed
-#   link: '{{ repoUrl }}/issues/2'
-#   actions:
-#   - type: createIssue
-#     title: Git log
-#     body: 03-git-log-issue.md
-#     action_id: git_log_issue
-#   - type: respond
-#     with: closed-issue.md
-#     data:
-#       nextIssueUrl: '%actions.git_log_issue.data.html_url%'
+- title: Como usar HEAD
+  description: Que es el puntero `HEAD`?
+  event: issues.closed
+  link: '{{ repoUrl }}/issues/2'
+  actions:
+  - type: createIssue
+    title: Git log
+    body: 03-git-log-issue.md
+    action_id: git_log_issue
+  - type: respond
+    with: closed-issue.md
+    data:
+      nextIssueUrl: '%actions.git_log_issue.data.html_url%'
 
 # - title: Git log
 #   description: Como ver los logs de una manera mas práctica
