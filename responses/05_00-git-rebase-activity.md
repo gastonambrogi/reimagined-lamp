@@ -12,16 +12,7 @@ _Vamos a hacer rebase de los ultimos 3 commits realizados en este branch._
    1. Se deja el primero como `pick 02d5b85 Update README.md`.
       1. :robot: _Los commits que dejemos como `pick` git los considerara tal cual estan sin alterarlos._
       2. :robot: _Si dejamos todos como `pick` el rebase no tendra efecto._
-      3. :robot: _Git nos da una ayuda cuando entramos en rebasing:_
-
-        ```shell
-          # Commands:
-          # p, pick <commit> = use commit
-          # s, squash <commit> = use commit, but meld into previous commit
-          # f, fixup <commit> = like "squash", but discard this commit's log message
-          # ....
-        ```
-
+      <!-- 3. :robot: _Git nos da una ayuda cuando entramos en rebasing:_ -->
    2. Reemplazar desde el segundo al ultimo `pick` por `squash`. Ej: 
 
       ![https://miro.medium.com/max/830/1*dPaOFpMJTb5KMyS-5mO_nA.gif](https://miro.medium.com/max/830/1*dPaOFpMJTb5KMyS-5mO_nA.gif)
