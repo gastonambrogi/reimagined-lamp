@@ -15,19 +15,19 @@ before:
     - 00_01-welcome.md
 
 steps:
-- title: Comencemos! 
-  description: Tiremos un poco magia con Git 
-  event: issues.closed 
-  link: '{{ repoUrl }}/issues/1' 
-  actions:
-  - type: createIssue
-    title: Como usar HEAD
-    body: 02_using_head.md
-    action_id: head_issue
-  - type: respond
-    with: closed-issue.md
-    data:
-      nextIssueUrl: '%actions.head_issue.data.html_url%'
+# - title: Comencemos! 
+#   description: Tiremos un poco magia con Git 
+#   event: issues.closed 
+#   link: '{{ repoUrl }}/issues/1' 
+#   actions:
+#   - type: createIssue
+#     title: Como usar HEAD
+#     body: 02_using_head.md
+#     action_id: head_issue
+#   - type: respond
+#     with: closed-issue.md
+#     data:
+#       nextIssueUrl: '%actions.head_issue.data.html_url%'
 
 - title: Como usar HEAD
   description: Que es el puntero `HEAD`?
