@@ -8,7 +8,7 @@
 :robot: Esto que hiciste _(punto 1 y 3)_ se puede resolver haciendo solamente `git stash drop`.
 
 ### Bien! 
-Despues de aceptar los cambios sugeridos, **aproba** este PR en la pestaña "**Files Changed**" en "**Review changes**".
+Despues de aceptar los cambios sugeridos, **aproba** este PR en la pestaña "**Files Changed**" en "**Review changes**" :point_up:.
 ![Aproba este PR en la pestaña Files Changed en Review changes](https://i.imgur.com/r1dqGbU.png)
 
 <hr>
