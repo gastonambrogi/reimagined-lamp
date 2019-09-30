@@ -8,6 +8,7 @@ En esta seccion solo vamos a usar la tarea de **Crear Pull Request's** pero pode
 ### Instalar HUB
 
 OSX: `brew install hub`
+
 GNU/Linux: `sudo apt-get install hub`
 
 ### Usar HUB
