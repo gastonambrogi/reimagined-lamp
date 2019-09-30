@@ -7,13 +7,13 @@ En esta actividad solo vamos a ver los logs entre 2 commits.
 
 ### :keyboard: Actividad: Ejecutar `git log` entre 2 commits
 
-1. Ejecuta `git log 0f43333..HEAD --oneline` para ver los commits entre HEAD y un commit previo:
+1. Ejecuta `git log 39a1f5b..HEAD --oneline` para ver los commits entre HEAD y un commit previo:
    1. La opcion `--oneline` reduce la informacion de los commits solo a el titulo del mismo.
 
 ### :keyboard: Actividad 2: Contar cantidad de commits desde el log
 
 1. Para contar los cambios aplicados entre 2 commits tenemos que ejecutar:
-   1. `git log 0f43333..HEAD --oneline --no-merges | wc -l`
+   1. `git log 39a1f5b..HEAD --oneline --no-merges | wc -l`
    2. Para quitar los commits de Merge filtramos agregandole `--no-merges`
    3. Una vez que tenemos los commits que nos interesan, contamos las lineas resultantes con `wc -l`
 
