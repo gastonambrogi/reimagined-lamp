@@ -9,7 +9,7 @@ _Vamos a hacer rebase de los ultimos 3 commits realizados en este branch._
 3. `git log master...HEAD --oneline`
    1. :robot: _Contamos los commits que hay desde master, branch de donde se creo el branch first-content, y donde estamos actualmente. Esos 3 commits que se ven es porque estamos 3 commits delante de master_
 4. `git rebase -i HEAD~3`
-   1. Se deja el primero como `pick 02d5b85 Update README.md`.
+   1. Se deja el primero como `pick fdda13a Update README.md`.
       1. :robot: _Los commits que dejemos como `pick` git los considerara tal cual estan sin alterarlos._
       2. :robot: _Si dejamos todos como `pick` el rebase no tendra efecto._
       <!-- 3. :robot: _Git nos da una ayuda cuando entramos en rebasing:_ -->
